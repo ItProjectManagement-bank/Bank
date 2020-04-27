@@ -1,5 +1,5 @@
 # Bank
-package cn.sdut.po;
+
 
 public class Account {
 	private int id;
