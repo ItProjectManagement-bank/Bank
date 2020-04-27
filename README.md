@@ -48,13 +48,7 @@ public class Account {
 
 }
 
-package cn.sdut.main;
 
-import java.util.List;
-import java.util.Scanner;
-
-import cn.sdut.dao.AccountDao;
-import cn.sdut.po.Account;
 
 public class Main {
 
