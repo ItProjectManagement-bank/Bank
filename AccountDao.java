@@ -83,8 +83,8 @@ public class AccountDao extends BaseDao{
 		int result2=0;
 		try {
 			con=getConnection();
-			String sql2="update account set money=money+? where id=?";//Ôö¼Ó½ð¶î
-			String sql1="update account set money=money-? where id=?";//¼õÉÙ½ð¶î
+			String sql2="update account set money=money+? where id=?";//Ã”Ã¶Â¼Ã“Â½Ã°Â¶Ã®
+			String sql1="update account set money=money-? where id=?";//Â¼ÃµÃ‰Ã™Â½Ã°Â¶Ã®
 			
 			pst=con.prepareStatement(sql1);
 			pst.setDouble(1, change);
@@ -111,7 +111,7 @@ public class AccountDao extends BaseDao{
 		return flag;
 	}
 	//selectAll
-	public List<Account> selectAll()
+	public List<Account> selectAlL()
 	{
 		List<Account> accountList=new ArrayList<Account>();
 		try {
@@ -119,7 +119,7 @@ public class AccountDao extends BaseDao{
 			String sql="select * from account";
 			pst=con.prepareStatement(sql);
 			rs=pst.executeQuery();
-			while(rs.next())
+			while(rs.next()!=null)
 			{
 				Account account=new Account();
 				account.setId(rs.getInt(1));
